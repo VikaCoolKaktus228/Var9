@@ -1,0 +1,24 @@
+﻿<Page x:Class="Var9.Pages.AddEditGoodsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Var9.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="410" d:DesignWidth="800"
+      Title="AddEditGoodsPage">
+
+    <Grid Background="White">
+        <TextBox x:Name="ArticleTb" HorizontalAlignment="Left" Margin="40,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS"/>
+        <Label Content="введите артикул" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="ArticleTb_Копировать" HorizontalAlignment="Left" Margin="43,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontFamily="Comic Sans MS" Height="27"/>
+        <Label Content="введите количество товара на складе" HorizontalAlignment="Left" Margin="40,167,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="ComboCategory" HorizontalAlignment="Left" Margin="43,138,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="выберите категорию" HorizontalAlignment="Left" Margin="40,106,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <Label Content="введите название" HorizontalAlignment="Left" Margin="43,226,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="ArticleTb_Копировать1" HorizontalAlignment="Left" Margin="43,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="ComboCategory_Копировать" HorizontalAlignment="Left" Margin="46,322,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="выберите производитель" HorizontalAlignment="Left" Margin="43,290,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+
+    </Grid>
+</Page>
