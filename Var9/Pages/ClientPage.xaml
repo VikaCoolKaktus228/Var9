@@ -9,7 +9,7 @@
       Title="ClientPage">
 
     <Grid Background="White">
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,121,0,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" FontFamily="Comic Sans MS">
+        <ListView x:Name="ListProduct" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,121,0,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" FontFamily="Comic Sans MS">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -23,23 +23,23 @@
                         </StackPanel>
                         <StackPanel Grid.Column="1">
                             <TextBlock>
-                                <Run Text="{Binding наименование товара}" FontWeight="Bold"></Run>
+                                <Run Text="{Binding ProductName.ProductName}" FontWeight="Bold"></Run>
                             </TextBlock>
                             <TextBlock>
-                                <Run Text="{Binding описение товара}"></Run>
+                                <Run Text="{Binding ProductDescription}"></Run>
                             </TextBlock>
                             <TextBlock>
                                 <Run Text="Производитель: "></Run>
-                                <Run Text="{Binding Производитель}"></Run>
+                                <Run Text="{Binding Manufacturer.NameManufacturer}"></Run>
                             </TextBlock>
                             <TextBlock>
                                 <Run Text="Цена: "> </Run>
-                                <Run Text="{Binding цена}"></Run>
+                                <Run Text="{Binding ProductCost}"></Run>
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Grid.Column="2">
                             <TextBlock>
-                                <Run Text="{Binding размер скидки}"></Run>
+                                <Run Text="{Binding ProductDiscountAmount}"></Run>
                             </TextBlock>
                         </StackPanel>
 
@@ -48,10 +48,10 @@
             </ListView.ItemTemplate>
         </ListView>
         <Label x:Name="InitialsLabel" Content="Label" HorizontalAlignment="Left" Margin="625,4,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-        <Button x:Name="ExitBtton" Content="выход" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="#FF498C51" FontFamily="Comic Sans MS"/>
-        <TextBox x:Name="SearchTb" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS"/>
-        <ComboBox x:Name="ComboFilter" HorizontalAlignment="Left" Margin="174,80,0,0" VerticalAlignment="Top" Width="120" Height="18" FontFamily="Comic Sans MS"/>
-        <ComboBox x:Name="ComboSort" HorizontalAlignment="Left" Margin="327,80,0,0" VerticalAlignment="Top" Width="120" Height="18" FontFamily="Comic Sans MS"/>
+        <Button x:Name="ExitBtton" Content="выход" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="#FF498C51" FontFamily="Comic Sans MS" Click="ExitBtton_Click"/>
+        <TextBox x:Name="SearchTb" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS" KeyDown="SearchTb_KeyDown"/>
+        <ComboBox x:Name="ComboFilter" HorizontalAlignment="Left" Margin="174,80,0,0" VerticalAlignment="Top" Width="120" Height="18" FontFamily="Comic Sans MS" SelectionChanged="ComboFilter_SelectionChanged"/>
+        <ComboBox x:Name="ComboSort" HorizontalAlignment="Left" Margin="327,80,0,0" VerticalAlignment="Top" Width="120" Height="18" FontFamily="Comic Sans MS" SelectionChanged="ComboSort_SelectionChanged"/>
         <Label x:Name="quantity" Content="из 30" HorizontalAlignment="Left" Margin="710,90,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
         <Label Content="поиск" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
         <Label Content="фильтрация" HorizontalAlignment="Left" Margin="174,48,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>

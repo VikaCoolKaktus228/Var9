@@ -9,16 +9,42 @@
       Title="AddEditGoodsPage">
 
     <Grid Background="White">
-        <TextBox x:Name="ArticleTb" HorizontalAlignment="Left" Margin="40,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="ArticleTb" Text="{Binding ProductArticle}" HorizontalAlignment="Left" Margin="40,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS"/>
         <Label Content="введите артикул" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-        <TextBox x:Name="ArticleTb_Копировать" HorizontalAlignment="Left" Margin="43,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontFamily="Comic Sans MS" Height="27"/>
+        <TextBox x:Name="OnStockTb" Text="{Binding ProductQuantityInStock}" HorizontalAlignment="Left" Margin="43,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontFamily="Comic Sans MS" Height="27"/>
         <Label Content="введите количество товара на складе" HorizontalAlignment="Left" Margin="40,167,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-        <ComboBox x:Name="ComboCategory" HorizontalAlignment="Left" Margin="43,138,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ComboCategory" ItemsSource="{Binding Category}" 
+                      DisplayMemberPath="CategoryName"
+                      SelectedValuePath="IdCategory"
+                      SelectedValue="{Binding ProductCategory}" HorizontalAlignment="Left" Margin="43,138,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="выберите категорию" HorizontalAlignment="Left" Margin="40,106,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-        <Label Content="введите название" HorizontalAlignment="Left" Margin="43,226,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-        <TextBox x:Name="ArticleTb_Копировать1" HorizontalAlignment="Left" Margin="43,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS"/>
-        <ComboBox x:Name="ComboCategory_Копировать" HorizontalAlignment="Left" Margin="46,322,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="выберите производитель" HorizontalAlignment="Left" Margin="43,290,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <Label Content="выберите единицу измерения товара" HorizontalAlignment="Left" Margin="43,226,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="ManufacturerCombo" ItemsSource="{Binding Manufacturer}" 
+                      DisplayMemberPath="NameMaufacturer"
+                      SelectedValuePath="IdManufacturer"
+                      SelectedValue="{Binding ProductManufacturer}" HorizontalAlignment="Left" Margin="46,322,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="выберите производителя" HorizontalAlignment="Left" Margin="43,290,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="ProductNameCombo" ItemsSource="{Binding ProductName}" 
+                      DisplayMemberPath="ProductName"
+                      SelectedValuePath="IdProductName"
+                      SelectedValue="{Binding ProductName}"  HorizontalAlignment="Left" Margin="309,75,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="выберите тип товара" HorizontalAlignment="Left" Margin="309,43,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <ComboBox x:Name="UnitCombo" ItemsSource="{Binding Unit}" 
+                      DisplayMemberPath="UnitName"
+                      SelectedValuePath="IdUnit"
+                      SelectedValue="{Binding UnitId}" HorizontalAlignment="Left" Margin="46,263,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="CostTb" Text="{Binding ProductCost}" HorizontalAlignment="Left" Margin="309,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontFamily="Comic Sans MS" Height="27"/>
+        <Label Content="введите цену товара" HorizontalAlignment="Left" Margin="309,102,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="ActDiscTb" Text="{Binding ProductDiscountAmount}" HorizontalAlignment="Left" Margin="309,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontFamily="Comic Sans MS" Height="27"/>
+        <Label Content="введите действующую скидку на товар" HorizontalAlignment="Left" Margin="306,180,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="MaxDiscTb" Text="{Binding MaxDiscountAmount}" HorizontalAlignment="Left" Margin="309,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontFamily="Comic Sans MS" Height="27"/>
+        <Label Content="введите максимально возможную скидку на товар" HorizontalAlignment="Left" Margin="306,253,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <TextBox x:Name="DescriptionTb" Text="{Binding ProductDescription}" HorizontalAlignment="Left" Margin="593,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197" FontFamily="Comic Sans MS" Height="158"/>
+        <Label Content="введите описание товара"  HorizontalAlignment="Left" Margin="593,50,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+        <Button x:Name="AddChangeButton" Content="добавить товар" HorizontalAlignment="Left" Margin="326,358,0,0" VerticalAlignment="Top" Height="36" Width="114" Background="#FF498C51" FontFamily="Comic Sans MS"/>
+        <Button x:Name="GoBackButton" Content="назад" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="68" Background="#FF498C51" FontFamily="Comic Sans MS" Click="GoBackButton_Click"/>
+        <Button x:Name="DeleteButton" Content="удалить товар" HorizontalAlignment="Left" Margin="692,5,0,0" VerticalAlignment="Top" Height="35" Width="98" Background="#FF76E383" FontFamily="Comic Sans MS"/>
+        <Button x:Name="ExitButton" Content="выйти" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Height="30" Width="68" Background="#FF498C51" FontFamily="Comic Sans MS" Click="ExitButton_Click"/>
 
     </Grid>
 </Page>

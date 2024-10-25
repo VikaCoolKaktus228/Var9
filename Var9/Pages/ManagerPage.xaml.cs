@@ -17,11 +17,11 @@ using Var9.ApplicationData;
 namespace Var9.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AdmininstratorPage.xaml
+    /// Логика взаимодействия для ManagerPage.xaml
     /// </summary>
-    public partial class AdmininstratorPage : Page
+    public partial class ManagerPage : Page
     {
-        public AdmininstratorPage()
+        public ManagerPage()
         {
             InitializeComponent();
             List<Product> productlist = AppConnect.ModelFish.Product.ToList();
@@ -84,7 +84,7 @@ namespace Var9.Pages
 
         }
 
-        private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
+        private void SearchTb_KeyDown(object sender, KeyEventArgs e)
         {
             FindProduct();
         }
@@ -97,21 +97,6 @@ namespace Var9.Pages
         private void ComboSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             FindProduct();
-        }
-
-        private void ExitBtton_Click(object sender, RoutedEventArgs e)
-        {
-            AppFrame.MainFrame.Navigate(new Authorization());
-        }
-
-        private void AddGoodsButon_Click(object sender, RoutedEventArgs e)
-        {
-            AppFrame.MainFrame.Navigate(new AddEditGoodsPage());
-        }
-
-        private void EditGoodsButton_Click(object sender, RoutedEventArgs e)
-        {
-            AppFrame.MainFrame.Navigate(new AddEditGoodsPage());
         }
     }
 }

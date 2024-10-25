@@ -1,4 +1,4 @@
-﻿<Page x:Class="Var9.Pages.AdmininstratorPage"
+﻿<Page x:Class="Var9.Pages.ManagerPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,9 +6,8 @@
       xmlns:local="clr-namespace:Var9.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="410" d:DesignWidth="800"
-      Title="AdmininstratorPage">
-
-    <Grid Background="White">
+      Title="ManagerPage">
+    <Grid Background="White" MinHeight="410" MinWidth="800">
         <ListView x:Name="ListProduct" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,121,0,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" FontFamily="Comic Sans MS">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -19,7 +18,7 @@
                             <ColumnDefinition Width="192"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="0,0,0,-66">
-                            <Image Height="72" Width="100" Source="{Binding CurrentPhoto}"/>
+                            <Image Height="72" Width="100"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1">
                             <TextBlock>
@@ -30,7 +29,7 @@
                             </TextBlock>
                             <TextBlock>
                                 <Run Text="Производитель: "></Run>
-                                <Run Text="{Binding Manufacturer.NameMa}"></Run>
+                                <Run Text="{Binding Manufacturer.NameManufacturer}"></Run>
                             </TextBlock>
                             <TextBlock>
                                 <Run Text="Цена: "> </Run>
@@ -38,23 +37,25 @@
                             </TextBlock>
                         </StackPanel>
                         <StackPanel Grid.Column="2">
-                            <TextBlock><Run Text="{Binding ProductDiscountAmount}"/></TextBlock>
-                            <Button x:Name="EditGoodsButton" Height="26" Width="130" Content="Изменить товар" Background="#FF76E383" Click="EditGoodsButton_Click" />
+                            <TextBlock>
+                                <Run Text="{Binding ProductDiscountAmount}"></Run>
+                            </TextBlock>
                         </StackPanel>
+
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <Label x:Name="InitialsLabel" Content="Label" HorizontalAlignment="Left" Margin="625,4,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-        <Button x:Name="ExitBtton" Content="выход" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="#FF498C51" FontFamily="Comic Sans MS" Click="ExitBtton_Click"/>
-        <TextBox x:Name="SearchTb" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS" TextChanged="SearchTb_TextChanged"/>
+        <Button x:Name="ExitBtton" Content="выход" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="#FF498C51" FontFamily="Comic Sans MS" />
+        <TextBox x:Name="SearchTb" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Comic Sans MS" KeyDown="SearchTb_KeyDown" />
         <ComboBox x:Name="ComboFilter" HorizontalAlignment="Left" Margin="174,80,0,0" VerticalAlignment="Top" Width="120" Height="18" FontFamily="Comic Sans MS" SelectionChanged="ComboFilter_SelectionChanged" />
         <ComboBox x:Name="ComboSort" HorizontalAlignment="Left" Margin="327,80,0,0" VerticalAlignment="Top" Width="120" Height="18" FontFamily="Comic Sans MS" SelectionChanged="ComboSort_SelectionChanged" />
         <Label x:Name="quantity" Content="из 30" HorizontalAlignment="Left" Margin="710,90,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
         <Label Content="поиск" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
         <Label Content="фильтрация" HorizontalAlignment="Left" Margin="174,48,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
         <Label Content="сортировка" HorizontalAlignment="Left" Margin="327,49,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
-        <Button x:Name="AddGoodsButon" Content="Добавить товар" HorizontalAlignment="Left" Margin="101,10,0,0" VerticalAlignment="Top" Background="#FF76E383" FontFamily="Comic Sans MS" Height="27" Width="113" Click="AddGoodsButon_Click"/>
+        <Button x:Name="OrdersLook" Content="Просмотр заказов" HorizontalAlignment="Left" Margin="665,41,0,0" VerticalAlignment="Top" Background="#FF76E383" FontFamily="Comic Sans MS" Height="33" Width="127"/>
 
     </Grid>
 </Page>

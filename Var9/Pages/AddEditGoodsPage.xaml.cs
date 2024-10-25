@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Var9.ApplicationData;
 
 namespace Var9.Pages
 {
@@ -23,6 +24,16 @@ namespace Var9.Pages
         public AddEditGoodsPage()
         {
             InitializeComponent();
+        }
+
+        private void GoBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.MainFrame.Navigate(new AdmininstratorPage());
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.MainFrame.Navigate(new Authorization());
         }
     }
 }

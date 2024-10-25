@@ -15,21 +15,20 @@ namespace Var9.ApplicationData
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Entities : DbContext
+    public partial class Entities1 : DbContext
     {
-        private static Entities _context;
-        public Entities()
-            : base("name=Entities")
+        private static Entities1 _context;
+        public Entities1()
+            : base("name=Entities1")
         {
         }
 
-        public static Entities GetContext()
+        public static Entities1 GetContext()
         {
-            if (_context == null)
-                _context = new Entities();
+            if(_context == null)
+                _context = new Entities1(); 
             return _context;
         }
-
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -41,6 +40,7 @@ namespace Var9.ApplicationData
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderProduct> OrderProduct { get; set; }
         public virtual DbSet<OrderStatus> OrderStatus { get; set; }
+        public virtual DbSet<PickUpPoint> PickUpPoint { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductName> ProductName { get; set; }
         public virtual DbSet<ProductStatus> ProductStatus { get; set; }

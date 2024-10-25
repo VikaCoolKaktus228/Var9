@@ -27,21 +27,6 @@ namespace Var9.ApplicationData
         public string ProductPhoto { get; set; }
         public Nullable<byte> MaxDiscountAmount { get; set; }
         public int UnitId { get; set; }
-
-        public string CurrentPhoto
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(ProductPhoto) || String.IsNullOrWhiteSpace(ProductPhoto))
-                {
-                    return "/Images/picture.png";
-                }
-                else
-                {
-                    return "/Images/" + ProductPhoto;
-                }
-            }
-        }
     
         public virtual Category Category { get; set; }
         public virtual Manufacturer Manufacturer { get; set; }
