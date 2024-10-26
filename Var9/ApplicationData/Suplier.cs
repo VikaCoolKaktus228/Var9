@@ -12,11 +12,18 @@ namespace Var9.ApplicationData
     using System;
     using System.Collections.Generic;
     
-    public partial class OrderProduct
+    public partial class Suplier
     {
-        public int OrderID { get; set; }
-        public string ProductArticleNumber { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Suplier()
+        {
+            this.Product = new HashSet<Product>();
+        }
     
-        public virtual Order Order { get; set; }
+        public int IdSuplier { get; set; }
+        public string NameSuplier { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

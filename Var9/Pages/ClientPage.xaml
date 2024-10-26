@@ -23,7 +23,7 @@
                         </StackPanel>
                         <StackPanel Grid.Column="1">
                             <TextBlock>
-                                <Run Text="{Binding ProductName.ProductName}" FontWeight="Bold"></Run>
+                                <Run Text="{Binding ProductName.ProductName1}" FontWeight="Bold"></Run>
                             </TextBlock>
                             <TextBlock>
                                 <Run Text="{Binding ProductDescription}"></Run>
@@ -40,6 +40,7 @@
                         <StackPanel Grid.Column="2">
                             <TextBlock>
                                 <Run Text="{Binding ProductDiscountAmount}"></Run>
+                                <Run Text="%"></Run>
                             </TextBlock>
                         </StackPanel>
 

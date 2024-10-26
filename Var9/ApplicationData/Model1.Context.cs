@@ -15,21 +15,19 @@ namespace Var9.ApplicationData
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Entities1 : DbContext
+    public partial class Entities2 : DbContext
     {
-        private static Entities1 _context;
-        public Entities1()
-            : base("name=Entities1")
+        private static Entities2 _context;
+        public Entities2()
+            : base("name=Entities2")
         {
         }
-
-        public static Entities1 GetContext()
+        public static Entities2 GetContext()
         {
-            if(_context == null)
-                _context = new Entities1(); 
+            if (_context == null)
+                _context = new Entities2();
             return _context;
         }
-    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -38,13 +36,13 @@ namespace Var9.ApplicationData
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Manufacturer> Manufacturer { get; set; }
         public virtual DbSet<Order> Order { get; set; }
-        public virtual DbSet<OrderProduct> OrderProduct { get; set; }
         public virtual DbSet<OrderStatus> OrderStatus { get; set; }
         public virtual DbSet<PickUpPoint> PickUpPoint { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductName> ProductName { get; set; }
         public virtual DbSet<ProductStatus> ProductStatus { get; set; }
         public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<Suplier> Suplier { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Unit> Unit { get; set; }
         public virtual DbSet<User> User { get; set; }

@@ -14,7 +14,16 @@ namespace Var9.ApplicationData
     
     public partial class PickUpPoint
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PickUpPoint()
+        {
+            this.Order = new HashSet<Order>();
+        }
+    
         public int IdPickUpPoint { get; set; }
-        public string Adress { get; set; }
+        public string PickUpPointAdress { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

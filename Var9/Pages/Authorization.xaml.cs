@@ -45,7 +45,7 @@ namespace Var9.Pages
                             case 1:
                                 MessageBox.Show("здраствйте администратор " + userobj.UserLogin,
                         "уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                                AppFrame.MainFrame.Navigate(new AdmininstratorPage());
+                                AppFrame.MainFrame.Navigate(new AdmininstratorPage(/*(sender as Button).DataContext as User)*/));
                                 break;
                             case 2:
                                 MessageBox.Show("здраствйте пользователь " + userobj.UserLogin,

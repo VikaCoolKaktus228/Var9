@@ -4,27 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bd5d2cb9556a4c5a9a543923bcbb02e5" Name="Diagram1">
-        <EntityTypeShape EntityType="nineModel.Category" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.Manufacturer" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.Order" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.OrderProduct" Width="1.5" PointX="10.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.OrderStatus" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.PickUpPoint" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.ProductName" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.ProductStatus" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.Role" Width="1.5" PointX="5.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.Unit" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="nineModel.User" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
-        <AssociationConnector Association="nineModel.FK_Product_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="nineModel.FK_Product_Manufacturer" ManuallyRouted="false" />
-        <AssociationConnector Association="nineModel.FK__OrderProd__Order__68687968" ManuallyRouted="false" />
-        <AssociationConnector Association="nineModel.FK_Order_OrderStatus" ManuallyRouted="false" />
-        <AssociationConnector Association="nineModel.FK_Product_ProductName" ManuallyRouted="false" />
-        <AssociationConnector Association="nineModel.FK_Product_Unit" ManuallyRouted="false" />
-        <AssociationConnector Association="nineModel.FK__User__UserRole__3D5E1FD2" ManuallyRouted="false" />
+      <Diagram DiagramId="62b4d37b1510437e9684ff4e91bdc2a7" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Category" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Manufacturer" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OrderStatus" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PickUpPoint" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Product" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProductName" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProductStatus" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Role" Width="1.5" PointX="7.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Suplier" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Unit" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="10" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Product_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Order_OrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Order_PickUpPoint" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_ProductName" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_ProductStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_Suplier" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__User__UserRole__61BB7BD9" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.OrderProduct" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

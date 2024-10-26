@@ -21,6 +21,7 @@ namespace Var9.Pages
     /// </summary>
     public partial class AdmininstratorPage : Page
     {
+        
         public AdmininstratorPage()
         {
             InitializeComponent();
@@ -106,12 +107,21 @@ namespace Var9.Pages
 
         private void AddGoodsButon_Click(object sender, RoutedEventArgs e)
         {
-            AppFrame.MainFrame.Navigate(new AddEditGoodsPage());
+            AppFrame.MainFrame.Navigate(new AddEditGoodsPage(null));
         }
 
         private void EditGoodsButton_Click(object sender, RoutedEventArgs e)
         {
-            AppFrame.MainFrame.Navigate(new AddEditGoodsPage());
+            var selectedproduct = ListProduct.SelectedItems.Cast<Product>().ToList();
+            if (selectedproduct.Count > 0)
+            {
+                AppFrame.MainFrame.Navigate(new AddEditGoodsPage((sender as Button).DataContext as Product));
+            }
+            else
+            {
+                MessageBox.Show("выберите товар!");
+            }
+            
         }
     }
 }

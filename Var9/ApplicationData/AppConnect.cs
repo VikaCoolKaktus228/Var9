@@ -9,6 +9,6 @@ namespace Var9.ApplicationData
 {
     internal class AppConnect
     {
-        public static Entities1 ModelFish;
+        public static Entities2 ModelFish;
     }
 }

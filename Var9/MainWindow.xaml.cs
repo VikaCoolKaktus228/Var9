@@ -25,7 +25,7 @@ namespace Var9
         public MainWindow()
         {
             InitializeComponent();
-            AppConnect.ModelFish = new Entities1();
+            AppConnect.ModelFish = new Entities2();
             AppFrame.MainFrame = mainwindowfraim;
             mainwindowfraim.Navigate(new Authorization());
         }
