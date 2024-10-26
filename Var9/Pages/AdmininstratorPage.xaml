@@ -55,6 +55,7 @@
         <Label Content="фильтрация" HorizontalAlignment="Left" Margin="174,48,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
         <Label Content="сортировка" HorizontalAlignment="Left" Margin="327,49,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
         <Button x:Name="AddGoodsButon" Content="Добавить товар" HorizontalAlignment="Left" Margin="101,10,0,0" VerticalAlignment="Top" Background="#FF76E383" FontFamily="Comic Sans MS" Height="27" Width="113" Click="AddGoodsButon_Click"/>
+        <Button x:Name="OrdersPage" Content="перейти к заказам" HorizontalAlignment="Left" Margin="234,10,0,0" VerticalAlignment="Top" Background="#FF76E383" FontFamily="Comic Sans MS" Height="27" Width="113" Click="OrdersPage_Click"/>
 
     </Grid>
 </Page>

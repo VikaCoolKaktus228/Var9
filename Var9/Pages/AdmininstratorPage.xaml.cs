@@ -123,5 +123,11 @@ namespace Var9.Pages
             }
             
         }
+
+        private void OrdersPage_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.MainFrame.Navigate(new OrdersPage());
+
+        }
     }
 }
